@@ -62,7 +62,7 @@ function App() {
       </div>
 
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full z-50 glass">
+      <nav className="fixed top-0 left-0 w-full z-50 glass backdrop-blur-lg">
 
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-center items-center">
 
@@ -200,7 +200,7 @@ function App() {
 
       </section>
 
-      {/* About Me */}
+      {/* About */}
       <section id="about" className="py-32 px-6">
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -238,8 +238,7 @@ function App() {
 
             <p className="text-gray-300 text-xl leading-10">
               I’m a passionate and motivated B.Tech student with strong interests
-              in software development, cybersecurity, AI, and smart-city
-              innovations.
+              in software development, cybersecurity, AI, and smart-city innovations.
             </p>
 
             <p className="text-gray-400 text-lg leading-9 mt-8">
