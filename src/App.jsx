@@ -55,36 +55,32 @@ function App() {
       {/* Background Glow */}
       <div className="fixed inset-0 -z-10">
 
-        <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-purple-500 opacity-20 blur-[120px] rounded-full float"></div>
+        <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-purple-500 opacity-20 blur-[120px] rounded-full"></div>
 
-        <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-cyan-500 opacity-20 blur-[120px] rounded-full float"></div>
+        <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-cyan-500 opacity-20 blur-[120px] rounded-full"></div>
 
       </div>
 
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full z-50 glass">
 
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-center items-center">
 
-          <h1 className="text-3xl font-bold gradient-text">
-            Daniya.dev
-          </h1>
+          <div className="hidden md:flex gap-12 text-lg font-semibold">
 
-          <div className="hidden md:flex gap-8 text-lg">
-
-            <a href="#about" className="hover:text-cyan-400 transition">
+            <a href="#about" className="hover:text-cyan-400 transition duration-300">
               About
             </a>
 
-            <a href="#skills" className="hover:text-cyan-400 transition">
+            <a href="#skills" className="hover:text-cyan-400 transition duration-300">
               Skills
             </a>
 
-            <a href="#projects" className="hover:text-cyan-400 transition">
+            <a href="#projects" className="hover:text-cyan-400 transition duration-300">
               Projects
             </a>
 
-            <a href="#contact" className="hover:text-cyan-400 transition">
+            <a href="#contact" className="hover:text-cyan-400 transition duration-300">
               Contact
             </a>
 
@@ -209,7 +205,6 @@ function App() {
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -231,7 +226,6 @@ function App() {
 
           </motion.div>
 
-          {/* About Content */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -245,8 +239,7 @@ function App() {
             <p className="text-gray-300 text-xl leading-10">
               I’m a passionate and motivated B.Tech student with strong interests
               in software development, cybersecurity, AI, and smart-city
-              innovations. I enjoy participating in hackathons, building impactful
-              real-world projects, and continuously learning modern technologies.
+              innovations.
             </p>
 
             <p className="text-gray-400 text-lg leading-9 mt-8">
@@ -300,93 +293,6 @@ function App() {
 
       </section>
 
-      {/* Achievements */}
-      <section className="py-32 px-6">
-
-        <h2 className="text-5xl font-bold gradient-text text-center mb-20">
-          Achievements
-        </h2>
-
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-
-          {[
-            { number: '15+', label: 'Certificates' },
-            { number: '3+', label: 'Internships' },
-            { number: '5+', label: 'Projects' },
-          ].map((item, index) => (
-
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="glass rounded-3xl p-12 text-center"
-            >
-
-              <h2 className="text-6xl font-black gradient-text mb-4">
-                {item.number}
-              </h2>
-
-              <p className="text-2xl text-gray-300">
-                {item.label}
-              </p>
-
-            </motion.div>
-
-          ))}
-
-        </div>
-
-      </section>
-
-      {/* Work Experience */}
-      <section className="py-32 px-6">
-
-        <h2 className="text-5xl font-bold gradient-text text-center mb-20">
-          Work Experience
-        </h2>
-
-        <div className="max-w-5xl mx-auto space-y-8">
-
-          {[
-            {
-              title: 'Sports Club Head',
-              overview:
-                'Led and managed the college sports club by organizing various sports events, coordinating teams, handling event planning, and ensuring smooth execution of activities while improving teamwork and leadership skills.',
-            },
-            {
-              title: 'Cybersecurity Intern',
-              overview:
-                'Worked on cybersecurity-related concepts including vulnerability analysis, secure authentication systems, and password security projects.',
-            },
-            {
-              title: 'Hackathon Participant',
-              overview:
-                'Participated in multiple hackathons including WE Hub Indeathon and collaborated on innovative smart-city and emergency response solutions.',
-            },
-          ].map((item, index) => (
-
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.02 }}
-              onClick={() => setSelectedProject(item)}
-              className="glass rounded-3xl p-10 cursor-pointer"
-            >
-
-              <h3 className="text-3xl font-bold gradient-text">
-                {item.title}
-              </h3>
-
-              <p className="text-gray-400 mt-3">
-                Click to view overview
-              </p>
-
-            </motion.div>
-
-          ))}
-
-        </div>
-
-      </section>
-
       {/* Projects */}
       <section id="projects" className="py-32 px-6">
 
@@ -416,62 +322,6 @@ function App() {
             </motion.div>
 
           ))}
-
-        </div>
-
-      </section>
-
-      {/* Strengths & Weaknesses */}
-      <section className="py-32 px-6">
-
-        <h2 className="text-5xl font-bold gradient-text text-center mb-20">
-          Strengths & Weaknesses
-        </h2>
-
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-
-          {/* Strengths */}
-          <motion.div
-            whileHover={{ y: -10 }}
-            className="glass rounded-3xl p-12"
-          >
-
-            <h3 className="text-4xl font-bold gradient-text mb-8">
-              Strengths
-            </h3>
-
-            <ul className="space-y-5 text-gray-300 text-xl">
-
-              <li>• Quick learner and adaptable</li>
-              <li>• Strong problem-solving skills</li>
-              <li>• Team collaboration and leadership</li>
-              <li>• Passionate about cybersecurity & AI</li>
-              <li>• Creative hackathon project builder</li>
-
-            </ul>
-
-          </motion.div>
-
-          {/* Weaknesses */}
-          <motion.div
-            whileHover={{ y: -10 }}
-            className="glass rounded-3xl p-12"
-          >
-
-            <h3 className="text-4xl font-bold gradient-text mb-8">
-              Weaknesses
-            </h3>
-
-            <ul className="space-y-5 text-gray-300 text-xl">
-
-              <li>• Sometimes overfocus on perfection</li>
-              <li>• Tend to take multiple responsibilities</li>
-              <li>• Still improving advanced backend skills</li>
-              <li>• Learning deeper system design concepts</li>
-
-            </ul>
-
-          </motion.div>
 
         </div>
 
